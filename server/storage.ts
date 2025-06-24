@@ -1,4 +1,6 @@
 import { guitarComponents, customizations, orders, type GuitarComponent, type InsertGuitarComponent, type Customization, type InsertCustomization, type Order, type InsertOrder } from "@shared/schema";
+import { db } from "./db";
+import { eq } from "drizzle-orm";
 
 export interface IStorage {
   // Guitar Components
@@ -141,4 +143,71 @@ export class MemStorage implements IStorage {
   }
 }
 
-export const storage = new MemStorage();
+// Database Storage Implementation
+export class DatabaseStorage implements IStorage {
+  async getGuitarComponents(): Promise<GuitarComponent[]> {
+    return await db.select().from(guitarComponents);
+  }
+
+  async getGuitarComponentsByCategory(category: string): Promise<GuitarComponent[]> {
+    return await db.select().from(guitarComponents).where(eq(guitarComponents.category, category));
+  }
+
+  async getGuitarComponent(id: number): Promise<GuitarComponent | undefined> {
+    const [component] = await db.select().from(guitarComponents).where(eq(guitarComponents.id, id));
+    return component || undefined;
+  }
+
+  async createCustomization(insertCustomization: InsertCustomization): Promise<Customization> {
+    const [customization] = await db
+      .insert(customizations)
+      .values({
+        ...insertCustomization,
+        createdAt: new Date().toISOString(),
+      })
+      .returning();
+    return customization;
+  }
+
+  async getCustomization(id: number): Promise<Customization | undefined> {
+    const [customization] = await db.select().from(customizations).where(eq(customizations.id, id));
+    return customization || undefined;
+  }
+
+  async getCustomizationBySessionId(sessionId: string): Promise<Customization | undefined> {
+    const [customization] = await db.select().from(customizations).where(eq(customizations.sessionId, sessionId));
+    return customization || undefined;
+  }
+
+  async updateCustomization(id: number, updates: Partial<InsertCustomization>): Promise<Customization | undefined> {
+    const [updated] = await db
+      .update(customizations)
+      .set(updates)
+      .where(eq(customizations.id, id))
+      .returning();
+    return updated || undefined;
+  }
+
+  async createOrder(insertOrder: InsertOrder): Promise<Order> {
+    const [order] = await db
+      .insert(orders)
+      .values({
+        ...insertOrder,
+        status: 'pending',
+        createdAt: new Date().toISOString(),
+      })
+      .returning();
+    return order;
+  }
+
+  async getOrder(id: number): Promise<Order | undefined> {
+    const [order] = await db.select().from(orders).where(eq(orders.id, id));
+    return order || undefined;
+  }
+
+  async getOrdersByEmail(email: string): Promise<Order[]> {
+    return await db.select().from(orders).where(eq(orders.email, email));
+  }
+}
+
+export const storage = new DatabaseStorage();
