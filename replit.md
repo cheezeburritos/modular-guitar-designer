@@ -1,4 +1,4 @@
-# Fender Guitar Customization App
+# Modular Custom Guitar App
 
 ## Overview
 
@@ -90,6 +90,8 @@ The build process creates optimized bundles and serves the React app as static f
 
 ## Recent Changes
 
+- June 24, 2025: Changed app name from "Fender Custom Shop" to "Modular Custom Guitar"
+- June 24, 2025: Added custom hand-drawing image for design hero section
 - June 24, 2025: Updated app to focus exclusively on Fender models (Stratocaster, Telecaster, Jazzmaster, P-Bass, Jazz Bass)
 - June 24, 2025: Migrated from in-memory storage to PostgreSQL database with Drizzle ORM
 - June 24, 2025: Seeded database with 20 authentic Fender components across 4 categories
