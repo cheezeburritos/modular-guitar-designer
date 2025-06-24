@@ -8,8 +8,8 @@ export default function Home() {
 
   const inspirationFenders = [
     {
-      image: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=500",
-      title: "Stratocaster Sunburst"
+      image: "@assets/STR1 Selection_1750774276185.png",
+      title: "Stratocaster"
     },
     {
       image: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=500",

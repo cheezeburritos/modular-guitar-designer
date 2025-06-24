@@ -3,9 +3,9 @@ import NavigationHeader from "@/components/navigation-header";
 export default function Gallery() {
   const fenderGallery = [
     {
-      url: "https://images.unsplash.com/photo-1510915361894-db8b60106cb1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=500",
+      url: "@assets/STR1 Selection_1750774276185.png",
       title: "Fender Stratocaster",
-      description: "Classic 3-tone sunburst finish with maple neck"
+      description: "Classic sunburst finish with maple neck and SSS pickup configuration"
     },
     {
       url: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=500",
