@@ -8,9 +8,9 @@ export default function Gallery() {
       description: "Classic sunburst finish with maple neck and SSS pickup configuration"
     },
     {
-      url: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=500",
+      url: "@assets/TLR1 Selection_1750774339892.png",
       title: "Fender Telecaster",
-      description: "Butterscotch blonde finish with ash body"
+      description: "Butterscotch finish with maple neck and dual single-coil pickups"
     },
     {
       url: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=400&h=500",
