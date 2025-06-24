@@ -1,36 +1,36 @@
 import NavigationHeader from "@/components/navigation-header";
 
 export default function Gallery() {
-  const galleryImages = [
+  const fenderGallery = [
     {
-      url: "https://pixabay.com/get/gd0f1a493a0f40e6b3ecb95513f155ab43175de80192292afe86f7b41cce6ccf4278386e0eed82d2ba3f1f0e987406a0aec592c8ee8629097a6160f2ad78ff08d_1280.jpg",
-      title: "Vintage Stratocaster",
-      description: "Classic sunburst finish with maple neck"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
-      title: "Gibson Les Paul",
-      description: "Rich mahogany body with humbucker pickups"
+      url: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
+      title: "Fender Stratocaster",
+      description: "Classic 3-tone sunburst finish with maple neck"
     },
     {
       url: "https://images.unsplash.com/photo-1526142684086-7ebd69df27a5?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
-      title: "Modern Electric",
-      description: "Contemporary design with stage lighting"
+      title: "Fender Telecaster",
+      description: "Butterscotch blonde finish with ash body"
+    },
+    {
+      url: "https://images.unsplash.com/photo-1516924962500-2b4b3b99ea02?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&h=500",
+      title: "Fender Jazzmaster",
+      description: "Surf green finish with offset body design"
+    },
+    {
+      url: "https://pixabay.com/get/g6f1594f00e2a11f14a3d266def0210231aec56c1dced4eed8959d3a12536a52009dddcac4ac340061235743d522a3e774fb8e5521b149f2687681edd03b7d6df_1280.jpg",
+      title: "Fender Precision Bass",
+      description: "Classic P-Bass with split-coil pickup"
     },
     {
       url: "https://pixabay.com/get/g43373159cd722d04f0375a33752a4b205805b74031be7441a52ef869b3fec56bc911d5b9c4d3d6e0d0d02aceb9988e60eda6426ec51fcff7c9ec1271ba99a185_1280.jpg",
-      title: "Studio Setup",
-      description: "Professional recording environment"
-    },
-    {
-      url: "https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=600",
-      title: "Premium Craftsmanship",
-      description: "Hand-crafted with attention to detail"
+      title: "Fender Jazz Bass",
+      description: "Olympic white finish with dual single-coil pickups"
     },
     {
       url: "https://images.unsplash.com/photo-1564186763535-ebb21ef5277f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&h=800",
-      title: "Custom Design",
-      description: "Unique configuration for your style"
+      title: "Custom Fender Build",
+      description: "Personalized configuration for your unique style"
     }
   ];
 
@@ -39,10 +39,10 @@ export default function Gallery() {
       <NavigationHeader />
       
       <div className="px-4 py-6">
-        <h1 className="text-2xl font-bold mb-6">Guitar Gallery</h1>
+        <h1 className="text-2xl font-bold mb-6">Fender Gallery</h1>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {galleryImages.map((image, index) => (
+          {fenderGallery.map((image, index) => (
             <div key={index} className="bg-white rounded-xl shadow-lg overflow-hidden">
               <img 
                 src={image.url} 

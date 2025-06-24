@@ -18,7 +18,7 @@ export const calculateProgress = (selectedComponents: any) => {
 };
 
 export const calculateTotalPrice = (selectedComponents: any) => {
-  const basePrice = 899;
+  const baseFenderPrice = 1299; // Higher base price for authentic Fender instruments
   let totalUpgrades = 0;
 
   Object.values(selectedComponents).forEach((component: any) => {
@@ -27,5 +27,5 @@ export const calculateTotalPrice = (selectedComponents: any) => {
     }
   });
 
-  return (basePrice + totalUpgrades).toFixed(0);
+  return (baseFenderPrice + totalUpgrades).toFixed(0);
 };

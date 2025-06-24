@@ -79,13 +79,13 @@ export default function OrderForm() {
     });
   };
 
-  const basePrice = 899;
+  const baseFenderPrice = 1299;
   const bodyUpgrade = selectedComponents.body ? parseFloat(selectedComponents.body.price) : 0;
   const neckUpgrade = selectedComponents.neck ? parseFloat(selectedComponents.neck.price) : 0;
   const pickupsUpgrade = selectedComponents.pickups ? parseFloat(selectedComponents.pickups.price) : 0;
   const hardwareUpgrade = selectedComponents.hardware ? parseFloat(selectedComponents.hardware.price) : 0;
   const shipping = 49;
-  const finalTotal = basePrice + bodyUpgrade + neckUpgrade + pickupsUpgrade + hardwareUpgrade + shipping;
+  const finalTotal = baseFenderPrice + bodyUpgrade + neckUpgrade + pickupsUpgrade + hardwareUpgrade + shipping;
 
   return (
     <Card>
@@ -178,8 +178,8 @@ export default function OrderForm() {
               <h4 className="font-semibold mb-3">Order Summary</h4>
               <div className="space-y-2 text-sm">
                 <div className="flex justify-between">
-                  <span>Base Guitar</span>
-                  <span className="font-medium">${basePrice}</span>
+                  <span>Base Fender Instrument</span>
+                  <span className="font-medium">${baseFenderPrice}</span>
                 </div>
                 {bodyUpgrade > 0 && (
                   <div className="flex justify-between">

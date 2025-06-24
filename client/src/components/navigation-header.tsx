@@ -7,7 +7,7 @@ export default function NavigationHeader() {
       <div className="flex items-center justify-between px-4 py-3">
         <div className="flex items-center space-x-3">
           <Guitar className="w-8 h-8 text-guitar-accent" />
-          <h1 className="text-xl font-bold text-guitar-primary">ModularGuitar</h1>
+          <h1 className="text-xl font-bold text-guitar-primary">Fender Custom Shop</h1>
         </div>
         <div className="flex items-center space-x-4">
           <Search className="w-6 h-6 text-gray-600" />
